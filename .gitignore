@@ -1,0 +1,8 @@
+.env
+fixtures/auth_state.json
+output/
+__pycache__/
+*.pyc
+.pytest_cache/
+playwright/.auth/
+*.png
