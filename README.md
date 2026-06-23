@@ -18,6 +18,7 @@ Auth state is cached at `fixtures/auth_state.json` and reused by all tests.
 From the project root:
 
 ```bash
+python tests/test_login_flow.py          
 pytest tests/test_create_project.py
 pytest tests/test_teach_ai_upload.py
 pytest tests/test_answer_survey.py
@@ -34,11 +35,7 @@ pytest test_create_project.py
 pytest   # all E2E tests
 ```
 
-Login script (refreshes auth state — not a pytest test):
-
-```bash
-python tests/test_login_flow.py
-```
+`tests/test_login_flow.py` is a standalone login script (not a pytest test) — run it with `python tests/test_login_flow.py` from the project root.
 
 Set `HEADLESS=false` in `.env` to run headed.
 
@@ -58,3 +55,7 @@ Set `HEADLESS=false` in `.env` to run headed.
 ## Selectors to verify
 
 Some labels differ from the spec in the live DOM. Check `locators/project_locators.py`, `locators/teach_ai_locators.py`, and `locators/survey_locators.py` for `# TODO: verify selector` comments and observed label notes in each test file docstring.
+
+## Interview Video
+
+https://drive.google.com/file/d/1YQX0gFUZK9X-_NhmgNQrC8b6Z7lNjf9a/view?usp=sharing
